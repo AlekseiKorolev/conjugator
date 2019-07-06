@@ -1,0 +1,96 @@
+.options{
+  margin: auto;
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+
+}
+
+.listName{
+  padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.listItem{
+  padding: 3px;
+  position: relative;
+  padding-right: 25px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.listItem::before{
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.listItem::after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  width: 7px;
+  height: 2px;
+  border-left: 0px solid #4caf50;
+  border-bottom: 0px solid #4caf50;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.listItem:hover::before{
+  content: '';
+  position: absolute;
+  top: 4px;
+  right: -1px;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #4caf50;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.listItem.active::before{
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 0px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #4caf50;
+  background-color: white;
+  border-radius: 10px;
+}
+.listItem.active::after{
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: -5px;
+  width: 18px;
+  height: 10px;
+  border-left: 4px solid #4caf50;
+  border-bottom: 4px solid #4caf50;
+  transform: rotate(-50deg);
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+button{
+  margin: auto;
+  width: 110px;
+  height: 110px;
+  font-size: 1.3rem;
+  border-radius: 50%;
+}

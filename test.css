@@ -1,0 +1,64 @@
+body {
+  font-family: 'Muli', sans-serif;
+  font-size: 1.1rem;
+}
+a {
+  text-decoration: none;
+  color: #336699;
+}
+
+/* Header */
+header {
+  height: 50px;
+  display: flex;
+  line-height: 3rem;
+  vertical-align: middle;
+  justify-content: center;
+  background-color: rgba(192,192,192,0.5);
+}
+header div {
+  padding-left: 30px;
+}
+/* Challenge*/
+.challenge {
+  min-width: 500px;;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid black;
+}
+.challenge .select {
+  padding: 15px 0px 0px 0px;
+}
+.challenge .items {
+  display: inline-block;
+  padding: 5px;
+}
+.challenge label {
+  font-size: 0.8rem;
+}
+.challenge .active {
+  padding: 1px 6px 2px;
+  background-color: #4CAF50;
+  color: white;
+}
+.challenge .nonactive {
+  padding: 1px 6px 2px;
+  background-color: white;
+  color: black;
+  border: 1px dotted black;
+}
+
+/* Footer */
+footer {
+  padding-left: 20px;
+  height: 50px;
+  width: 100%;
+  position: fixed;
+  line-height: 3rem;
+  vertical-align: middle;
+  font-size: 0.9rem;
+  bottom: 0px;
+  background-color: rgba(51,102,153,0.5);
+}

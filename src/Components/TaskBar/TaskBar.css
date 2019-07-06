@@ -1,0 +1,8 @@
+.task {
+  padding: 20px;
+}
+input[type="text"] {
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
