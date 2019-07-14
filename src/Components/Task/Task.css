@@ -1,0 +1,14 @@
+.notice{
+  margin: auto;
+  padding: 30px;
+  font-size: 1.2rem;
+}
+.task{
+
+  text-transform: capitalize;
+  padding: 30px;
+  font-size: 1.2rem;
+}
+.bold{
+  font-weight: bold;
+}
