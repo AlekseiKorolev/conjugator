@@ -1,25 +1,18 @@
 import React from 'react';
 import './App.css';
 import { Challenge } from '../Challenge/Challenge';
+import { Header } from '../Header/Header';
+import { Footer } from '../Footer/Footer';
 
 export class App extends React.Component {
   render(){
     return (
       <div className="App">
-        <header className="header">
-          <ul>
-            <li>Logo</li>
-            <li>Reglas</li>
-            <li>Verbos</li>
-            <li>Estatistica</li>
-          </ul>
-        </header>
-        <main>
+        <Header />
+        <div className="main">
           <Challenge />
-        </main>
-        <footer>
-          by <a href="mailto: aleksei.nik.korolev@gmail.com">Aleksei Korolev</a> 2019
-        </footer>
+        </div>
+        <Footer />
       </div>
     );
   }
