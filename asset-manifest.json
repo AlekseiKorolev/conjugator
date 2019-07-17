@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/conjugator/static/css/main.2967473d.chunk.css",
-    "main.js": "/conjugator/static/js/main.4c3bf862.chunk.js",
-    "main.js.map": "/conjugator/static/js/main.4c3bf862.chunk.js.map",
+    "main.js": "/conjugator/static/js/main.4ab0240c.chunk.js",
+    "main.js.map": "/conjugator/static/js/main.4ab0240c.chunk.js.map",
     "runtime~main.js": "/conjugator/static/js/runtime~main.f1cea6a4.js",
     "runtime~main.js.map": "/conjugator/static/js/runtime~main.f1cea6a4.js.map",
     "static/js/2.97d90857.chunk.js": "/conjugator/static/js/2.97d90857.chunk.js",
     "static/js/2.97d90857.chunk.js.map": "/conjugator/static/js/2.97d90857.chunk.js.map",
     "index.html": "/conjugator/index.html",
-    "precache-manifest.9e1eb028c5663cbf16b750ca1b23a41b.js": "/conjugator/precache-manifest.9e1eb028c5663cbf16b750ca1b23a41b.js",
+    "precache-manifest.bf90d59efd30e1b40eaaead65a2aea0d.js": "/conjugator/precache-manifest.bf90d59efd30e1b40eaaead65a2aea0d.js",
     "service-worker.js": "/conjugator/service-worker.js",
     "static/css/main.2967473d.chunk.css.map": "/conjugator/static/css/main.2967473d.chunk.css.map",
     "static/media/Field.css": "/conjugator/static/media/bg.7e3a4a6b.png"
