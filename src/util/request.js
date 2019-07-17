@@ -1,4 +1,4 @@
-import { verbs, persons, moods, tenses, dict } from './dict';
+import Dict from './Dict';
 
 function requestMood(mood, key){
   if(key){
@@ -52,8 +52,8 @@ function requestTense(tense, key){
   }
 }
 
-export const Verb = function (tenses, persons){
-  const allVerbs = Object.keys(verbs);
+export const Verb = function (allTenses, allPersons){
+  const allVerbs = Object.keys(Dict);
   let reqPerson,
     reqTense,
     reqMood,
@@ -62,8 +62,8 @@ export const Verb = function (tenses, persons){
     tense,
     answer;
   do {
-    person = persons[Math.floor(Math.random()*persons.length)];
-    tense = tenses[Math.floor(Math.random()*tenses.length)];
+    person = allPersons[Math.floor(Math.random()*allPersons.length)];
+    tense = allTenses[Math.floor(Math.random()*allTenses.length)];
     verb = allVerbs[Math.floor(Math.random()*allVerbs.length)];
 
     reqPerson = person.split(' ')[1].toLowerCase();
@@ -73,12 +73,11 @@ export const Verb = function (tenses, persons){
     reqMood = requestMood(reqMood, true);
     reqTense = requestTense(reqTense, true);
 
-    //console.log(`Request dict.${verb}.${reqPerson}.${reqMood}.${reqTense}`)
     try{
       if(reqMood.split(' ')[0] !== 'Imperative'){
-        answer = dict[verb][reqPerson][reqMood][reqTense]
+        answer = Dict[verb][reqPerson][reqMood][reqTense]
       }else{
-        answer = dict[verb][reqPerson][reqMood].Present
+        answer = Dict[verb][reqPerson][reqMood].Present
       }
     }catch(error){
       console.warn(error.message)

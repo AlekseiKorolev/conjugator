@@ -3,49 +3,31 @@ const data = require("./base.json");
 
 const myData = JSON.stringify(data);
 const myObj = JSON.parse(myData);
-export const verbs = {};
-export const persons = {};
-export const moods = {};
-export const tenses = {};
 
-export const dict = {};
+const Dict = {};
 
-Object.keys(myObj).map(keys => {// level of cojugared verbos
+for(let keys in myObj){// level of cojugared verbos
 	for(let item in myObj[keys]){// array into conjugared verbo
-		Object.keys(myObj[keys][item]).map(key => {// keys into this array
-			verbs[myObj[keys][item].infinitive] = {};
-			persons[myObj[keys][item].performer] = {};
-			moods[myObj[keys][item].mood] = {};
-			tenses[myObj[keys][item].tense] = {};
-		})
+		Dict[myObj[keys][item].infinitive] = {};
 	}
-});
+};
 
-Object.keys(myObj).map(keys => {// level of cojugared verbos
+for(let keys in myObj){// level of cojugared verbos
 	for(let item in myObj[keys]){// array into conjugared verbo
-		Object.keys(myObj[keys][item]).map(key => {// keys into this array
-			dict[myObj[keys][item].infinitive] = {};
-		})
+		Dict[myObj[keys][item].infinitive][myObj[keys][item].performer] = {};
 	}
-});
-Object.keys(myObj).map(keys => {// level of cojugared verbos
+};
+
+for(let keys in myObj){// level of cojugared verbos
 	for(let item in myObj[keys]){// array into conjugared verbo
-		Object.keys(myObj[keys][item]).map(key => {// keys into this array
-			dict[myObj[keys][item].infinitive][myObj[keys][item].performer] = {};
-		})
+		Dict[myObj[keys][item].infinitive][myObj[keys][item].performer][myObj[keys][item].mood] = {};
 	}
-});
-Object.keys(myObj).map(keys => {// level of cojugared verbos
+};
+
+for(let keys in myObj){// level of cojugared verbos
 	for(let item in myObj[keys]){// array into conjugared verbo
-		Object.keys(myObj[keys][item]).map(key => {// keys into this array
-			dict[myObj[keys][item].infinitive][myObj[keys][item].performer][myObj[keys][item].mood] = {};
-		})
+		Dict[myObj[keys][item].infinitive][myObj[keys][item].performer][myObj[keys][item].mood][myObj[keys][item].tense] = keys;
 	}
-});
-Object.keys(myObj).map(keys => {// level of cojugared verbos
-	for(let item in myObj[keys]){// array into conjugared verbo
-		Object.keys(myObj[keys][item]).map(key => {// keys into this array
-			dict[myObj[keys][item].infinitive][myObj[keys][item].performer][myObj[keys][item].mood][myObj[keys][item].tense] = keys;
-		})
-	}
-});
+};
+
+export default Dict;
