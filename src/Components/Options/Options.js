@@ -1,5 +1,5 @@
 import React from 'react';
-import AllOptions from './../../util/options';
+import AllOptions from './../../util/AllOptions';
 import './Options.css';
 
 export class Options extends React.Component {
